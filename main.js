@@ -45,6 +45,7 @@ class hearingLossSimNode extends AudioWorkletNode {
     constructor(context, baseURL, options) {
         super(context, 'hearingLossSim', options);
 
+        console.log("options: ", options);
         this.baseURL = baseURL;
         this.json = options.processorOptions.json;
         this.json_object = JSON.parse(this.json);
