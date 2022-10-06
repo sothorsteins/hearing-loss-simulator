@@ -32,6 +32,7 @@
     console.log("plugin ", plugin);
 
     plugin.load().then((node) => {
+        console.log("node: ", node);
     plugin.loadGui().then((elem) => {
       document.body.appendChild(elem);
       document.querySelector("#save").addEventListener('click', () => {
