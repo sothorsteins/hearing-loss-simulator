@@ -29,6 +29,7 @@
     var mediaSource = ctx.createMediaElementSource(player);
     var pluginURL = ".";
     var plugin = new FausthearingLossSim(ctx, pluginURL);
+    console.log("plugin ", plugin);
 
     plugin.load().then((node) => {
     plugin.loadGui().then((elem) => {
