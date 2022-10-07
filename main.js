@@ -526,6 +526,8 @@ class hearingLossSim {
                     var link = document.createElement('link');
                     link.rel = 'import';
                     link.href = real_url;
+                    console.log("link creating ", link);
+                    console.log("does doc head exist ", document.head);
                     document.head.appendChild(link);
                     link.onload = (e) => {
                         // the file has been loaded, instanciate GUI
