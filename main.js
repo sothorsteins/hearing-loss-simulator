@@ -532,12 +532,14 @@ class hearingLossSim {
                         // and get back the HTML elem
                         // HERE WE COULD REMOVE THE HARD CODED NAME
                         var element = createhearingLossSimGUI(this.node);
+                        console.log("elemenet created ", element);
                         resolve(element);
                     }
                 } else {
                     // LINK EXIST, WE AT LEAST CREATED ONE INSTANCE PREVIOUSLY
                     // so we can create another instance
                     var element = createhearingLossSimGUI(this.node);
+                    console.log("elemenet created ", element);
                     resolve(element);
                 }
             } catch (e) {
