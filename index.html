@@ -12,7 +12,7 @@
   <script src="main.js"></script>
 </head>
 <body>
-  <audio src="./trainconversation.wav" id="soundSample" controls loop></audio>
+  <audio src="./trainconversation.mp3" id="soundSample" controls loop></audio>
   <button id="save">Save current state</button>
   <button id="load">Load last saved state</button>
 </body>
@@ -29,10 +29,8 @@
     var mediaSource = ctx.createMediaElementSource(player);
     var pluginURL = ".";
     var plugin = new FausthearingLossSim(ctx, pluginURL);
-    console.log("plugin ", plugin);
 
     plugin.load().then((node) => {
-        console.log("node: ", node);
     plugin.loadGui().then((elem) => {
       document.body.appendChild(elem);
       document.querySelector("#save").addEventListener('click', () => {
